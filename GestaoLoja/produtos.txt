@@ -1,1 +1,2 @@
 1;Teclado Mecanico;150.0;Perifericos;Logitech;10.0;1.0;Un
+1;Arroz;500.0;Alimentos;Marca X;10.0;5.0;kg

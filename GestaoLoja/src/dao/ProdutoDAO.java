@@ -110,4 +110,30 @@ public class ProdutoDAO{
         }
     }
 
+
+    public void cadastrar(Produto p) {
+    // Usamos 'true' no FileWriter para indicar que queremos "adicionar" (append) ao final do arquivo,
+    // e não sobrescrever o que já existe.
+    try (BufferedWriter writer = new BufferedWriter(new FileWriter(caminhoArquivo, true))) {
+        
+        // Formata os dados do produto para uma linha de texto (o inverso do converterLinhaParaProduto)
+        String linha = p.getId() + ";" + 
+                       p.getDescricao() + ";" + 
+                       p.getValorVenda() + ";" + 
+                       p.getCategoria() + ";" + 
+                       p.getMarca() + ";" + 
+                       p.getQuantidadeEstoque() + ";" + 
+                       p.getConteudo() + ";" + 
+                       p.getUnidade();
+
+        writer.write(linha);
+        writer.newLine(); // Pula para a próxima linha para o próximo produto
+        
+        System.out.println("Produto cadastrado com sucesso!");
+
+    } catch (IOException e) {
+        System.err.println("Erro ao salvar o produto no arquivo: " + e.getMessage());
+    }
+}
+
 }
