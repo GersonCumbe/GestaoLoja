@@ -1,5 +1,5 @@
 import dao.ProdutoDAO;
-import model.Produto;
+import modelo.Produto;
 import java.util.List;
 
 public class GestaoLoja {

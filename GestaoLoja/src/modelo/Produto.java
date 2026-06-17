@@ -1,3 +1,5 @@
+package modelo;
+
 public class Produto{
 
 // Atributos privados (Encapsulamento)
@@ -23,6 +25,7 @@ public class Produto{
 
     } 
 
+    public Produto() { }
     // Getters e Setters (Para acessar e modificar de forma segura)
     public Long getId() {
         return id;

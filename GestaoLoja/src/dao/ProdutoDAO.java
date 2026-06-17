@@ -1,3 +1,10 @@
+package dao;
+
+import modelo.Produto; // Importa a classe Produto que está na pasta 'modelo'
+import java.util.List;
+import java.util.ArrayList;
+import java.io.*;
+
 public class ProdutoDAO{
 
     // Definimos o arquivo como "banco de dados"
